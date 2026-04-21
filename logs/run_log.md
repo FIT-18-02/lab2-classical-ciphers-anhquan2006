@@ -14,9 +14,8 @@
 
 ## Validation / File input
 
-- [x] Đã kiểm tra đầu vào không hợp lệ: Hệ thống thông báo lỗi khi nhập key là ký tự đặc biệt hoặc số âm.
-- [x] Đã đọc dữ liệu thành công từ file `data/input.txt` và xuất kết quả ra màn hình/file log.
+- [x] Đã kiểm tra đầu vào không hợp lệ: Hệ thống thông báo lỗi khi nhập key không phải là số.
+- [x] Đã đọc dữ liệu thành công từ file `data/input.txt` và xuất kết quả chính xác.
 
 ## Điều em học được từ bài lab
-
-Qua bài lab này, em đã nắm vững cơ chế hoạt động của các hệ mật mã cổ điển. Cụ thể, hệ Caesar sử dụng phép thay thế theo vòng tròn bảng chữ cái, còn Rail Fence sử dụng kỹ thuật hoán vị theo mô hình đường zigzag. Em cũng đã rèn luyện thêm kỹ năng xử lý file và chuẩn hóa dữ liệu đầu vào trong ngôn ngữ lập trình C++.
+Em đã hiểu được nguyên lý của mã hóa thay thế (Caesar) và mã hóa hoán vị (Rail Fence). Em cũng rèn luyện được kỹ năng quản lý mã nguồn và sử dụng GitHub Actions để kiểm tra bài tập tự động.

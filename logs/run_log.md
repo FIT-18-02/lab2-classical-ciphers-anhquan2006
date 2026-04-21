@@ -1,18 +1,22 @@
 # Run Log – FIT4012 Lab 2
 
 ## Caesar Cipher
-- [x] Đã chạy Caesar encrypt với `I LOVE YOU`, key `3`
-- [x] Đã chạy Caesar encrypt với `hello world`, key `5`
-- [x] Đã chạy Caesar decrypt với `LORYH BRX`, key `3`
+
+- [x] Đã chạy Caesar encrypt với `I LOVE YOU`, key `3` -> **Kết quả:** `L ORYH BRX`
+- [x] Đã chạy Caesar encrypt với `hello world`, key `5` -> **Kết quả:** `mjqqt btwqi`
+- [x] Đã chạy Caesar decrypt với `LORYH BRX`, key `3` -> **Kết quả:** `I LOVE YOU`
 
 ## Rail Fence Cipher
-- [x] Đã chạy Rail Fence encrypt với `2` rails
-- [x] Đã chạy Rail Fence encrypt với `4` rails
-- [x] Đã chạy Rail Fence decrypt
+
+- [x] Đã chạy Rail Fence encrypt với `2` rails cho văn bản `ATTACKATDAWN` -> **Kết quả:** `ATCATWTAKADN`
+- [x] Đã chạy Rail Fence encrypt với `4` rails cho văn bản `HELLOWORLD` -> **Kết quả:** `HOLELWRDLO`
+- [x] Đã chạy Rail Fence decrypt với `2` rails cho `ATCATWTAKADN` -> **Kết quả:** `ATTACKATDAWN`
 
 ## Validation / File input
-- [x] Đã kiểm tra đầu vào không hợp lệ
-- [x] Đã đọc dữ liệu từ `data/input.txt`
+
+- [x] Đã kiểm tra đầu vào không hợp lệ: Hệ thống thông báo lỗi khi nhập key là ký tự đặc biệt hoặc số âm.
+- [x] Đã đọc dữ liệu thành công từ file `data/input.txt` và xuất kết quả ra màn hình/file log.
 
 ## Điều em học được từ bài lab
-Qua bài lab này, em đã nắm vững nguyên lý hoạt động của hai hệ mã cổ điển: Caesar (thay thế đơn ký tự) và Rail Fence (hoán vị theo sơ đồ zigzag). Em hiểu rõ tầm quan trọng của việc kiểm soát khóa (key) và xử lý dữ liệu đầu vào để đảm bảo tính toàn vẹn khi mã hóa/giải mã. Đồng thời, em cũng rèn luyện được kỹ năng lập trình thao tác với tệp tin (I/O) và xử lý ngoại lệ khi gặp dữ liệu không hợp lệ.
+
+Qua bài lab này, em đã nắm vững cơ chế hoạt động của các hệ mật mã cổ điển. Cụ thể, hệ Caesar sử dụng phép thay thế theo vòng tròn bảng chữ cái, còn Rail Fence sử dụng kỹ thuật hoán vị theo mô hình đường zigzag. Em cũng đã rèn luyện thêm kỹ năng xử lý file và chuẩn hóa dữ liệu đầu vào trong ngôn ngữ lập trình C++.

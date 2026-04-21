@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// Kiểm tra thông điệp hợp lệ (chữ cái và dấu cách)
 bool is_valid_message(const string &text) {
     for (char c : text) {
         if (!isalpha(static_cast<unsigned char>(c)) && c != ' ') {
@@ -15,6 +16,7 @@ bool is_valid_message(const string &text) {
     return true;
 }
 
+// Hàm mã hóa Rail Fence
 string rail_fence_encrypt(const string &plaintext, int rails) {
     if (rails <= 1 || plaintext.empty()) return plaintext;
 
@@ -33,6 +35,7 @@ string rail_fence_encrypt(const string &plaintext, int rails) {
     return ciphertext;
 }
 
+// Hàm giải mã Rail Fence
 string rail_fence_decrypt(const string &ciphertext, int rails) {
     if (rails <= 1 || ciphertext.empty()) return ciphertext;
 
@@ -40,12 +43,14 @@ string rail_fence_decrypt(const string &ciphertext, int rails) {
     int rail = 0;
     int direction = 1;
 
+    // Đánh dấu các vị trí hình zigzag bằng ký tự '*'
     for (int i = 0; i < ciphertext.length(); ++i) {
         fence[rail][i] = '*';
         rail += direction;
         if (rail == rails - 1 || rail == 0) direction = -direction;
     }
 
+    // Điền các ký tự từ bản mã vào các vị trí đã đánh dấu
     int index = 0;
     for (int i = 0; i < rails; ++i) {
         for (int j = 0; j < ciphertext.length(); ++j) {
@@ -55,6 +60,7 @@ string rail_fence_decrypt(const string &ciphertext, int rails) {
         }
     }
 
+    // Đọc theo hình zigzag để lấy lại bản rõ
     string plaintext = "";
     rail = 0;
     direction = 1;
@@ -66,6 +72,7 @@ string rail_fence_decrypt(const string &ciphertext, int rails) {
     return plaintext;
 }
 
+// Hàm đọc thông điệp từ file
 string read_message_from_file(const string &path) {
     ifstream fin(path);
     string line;

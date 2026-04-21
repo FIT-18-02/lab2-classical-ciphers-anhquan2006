@@ -25,3 +25,4 @@ Tìm hiểu và cài đặt các hệ mật mã cổ điển bao gồm Caesar Ci
 
 ## 4. Điều em học được
 Em đã nắm vững cách thức hoạt động của các thuật toán mã hóa cổ điển và cách triển khai chúng bằng ngôn ngữ lập trình. Đồng thời, em cũng học được cách xử lý các trường hợp ngoại lệ như dấu cách và ký tự đặc biệt khi mã hóa.
+sửa lại

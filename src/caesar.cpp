@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Kiểm tra thông điệp hợp lệ (chỉ chứa chữ cái và dấu cách)
 bool is_valid_message(const string &text) {
     for (char c : text) {
         if (!isalpha(static_cast<unsigned char>(c)) && c != ' ') {
@@ -13,6 +14,7 @@ bool is_valid_message(const string &text) {
     return true;
 }
 
+// Hàm dịch chuyển từng ký tự
 char shift_char(char c, int shift) {
     if (!isalpha(static_cast<unsigned char>(c))) return c;
 
@@ -22,6 +24,7 @@ char shift_char(char c, int shift) {
     return static_cast<char>((c - base + shift) % 26 + base);
 }
 
+// Hàm mã hóa Caesar
 string caesar_encrypt(const string &plaintext, int shift) {
     string ciphertext;
     for (char c : plaintext) {
@@ -30,6 +33,7 @@ string caesar_encrypt(const string &plaintext, int shift) {
     return ciphertext;
 }
 
+// Hàm giải mã Caesar
 string caesar_decrypt(const string &ciphertext, int shift) {
     return caesar_encrypt(ciphertext, -shift);
 }
